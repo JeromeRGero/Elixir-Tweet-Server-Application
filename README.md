@@ -1,6 +1,7 @@
 # MyFirstApp
 
-**TODO: Add description**
+This is a small app made using Elixir which sends out tweets stored in a .txt file from the priv directory. 
+It uses quantum as its cron job setup, and extwitter as the twitter api handler.  
 
 ## Installation
 
