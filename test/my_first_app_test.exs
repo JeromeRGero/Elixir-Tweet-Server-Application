@@ -1,6 +1,6 @@
 defmodule MyFirstAppTest do
   use ExUnit.Case
-  # doctest MyFirstApp
+  doctest MyFirstApp.FileReader
 
   @tag default: true
   test "greets the world" do

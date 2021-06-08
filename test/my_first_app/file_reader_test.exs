@@ -28,6 +28,12 @@ defmodule FileReaderTest do
     assert str == "";
   end
 
+  test "The empty string should be returned" do
+    with_mock File, [read!: fn(_) -> "  " end] do
+      assert get_strings_to_tweet("nope.txt") == ""
+    end
+  end
+
   test "The string should be trimmed" do
     with_mock File, [read!: fn(_) -> " ABC " end] do
       assert get_strings_to_tweet("nope.txt") == "ABC"
